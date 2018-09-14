@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xu8-De-bM9">
+                                <rect key="frame" x="147" y="603" width="80" height="44"/>
+                                <color key="backgroundColor" red="0.19485653968486039" green="1" blue="0.90540959857423753" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="4iC-sN-Ep9"/>
+                                    <constraint firstAttribute="width" constant="80" id="Dba-kY-lvl"/>
+                                </constraints>
+                                <state key="normal" title="开始录音"/>
+                                <connections>
+                                    <action selector="recordDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HBj-7b-HK4"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vui-ek-RBm" customClass="PlotView">
+                                <rect key="frame" x="0.0" y="455" width="375" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="经opus编码再解码的PCM波形" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVU-sx-45H">
+                                        <rect key="frame" x="105" y="113.5" width="165" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87378712879999998" green="1" blue="0.91616406409999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="gVU-sx-45H" secondAttribute="bottom" id="MB2-p7-FiO"/>
+                                    <constraint firstAttribute="height" constant="128" id="XDP-pX-5rK"/>
+                                    <constraint firstItem="gVU-sx-45H" firstAttribute="centerX" secondItem="vui-ek-RBm" secondAttribute="centerX" id="k7N-0r-kAR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rg4-qX-SlP" customClass="PlotView">
+                                <rect key="frame" x="0.0" y="319" width="375" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原始PCM波形" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o7j-uq-uI6">
+                                        <rect key="frame" x="149.5" y="113.5" width="76" height="14.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="o7j-uq-uI6" firstAttribute="centerX" secondItem="Rg4-qX-SlP" secondAttribute="centerX" id="Sts-HY-e6M"/>
+                                    <constraint firstAttribute="height" constant="128" id="eGv-RH-SBZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="o7j-uq-uI6" secondAttribute="bottom" id="uWJ-to-e9h"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="原PCM: -- 字节  OPUS: -- 字节  后PCM: -- 字节   压缩倍数:--" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTY-u2-f2E">
+                                <rect key="frame" x="8" y="253.5" width="359" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JTY-u2-f2E" secondAttribute="trailing" constant="8" id="2zb-0z-frE"/>
+                            <constraint firstItem="Rg4-qX-SlP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3Pu-KM-TfW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Xu8-De-bM9" secondAttribute="bottom" constant="20" id="6kd-K5-337"/>
+                            <constraint firstItem="Xu8-De-bM9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="70O-Ep-wZH"/>
+                            <constraint firstItem="Rg4-qX-SlP" firstAttribute="top" secondItem="JTY-u2-f2E" secondAttribute="bottom" constant="8" id="Ilv-TE-9Yi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vui-ek-RBm" secondAttribute="trailing" id="JdW-tN-8KH"/>
+                            <constraint firstItem="Rg4-qX-SlP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aol-19-uU4"/>
+                            <constraint firstItem="Xu8-De-bM9" firstAttribute="top" secondItem="vui-ek-RBm" secondAttribute="bottom" constant="20" id="c9d-EX-j2D"/>
+                            <constraint firstItem="JTY-u2-f2E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="isV-0q-tHL"/>
+                            <constraint firstItem="vui-ek-RBm" firstAttribute="top" secondItem="Rg4-qX-SlP" secondAttribute="bottom" constant="8" id="k32-3B-WgS"/>
+                            <constraint firstItem="vui-ek-RBm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sTn-0J-5FP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="JTY-u2-f2E" id="3y9-Ut-HDD"/>
+                        <outlet property="opusPlotView" destination="vui-ek-RBm" id="RHZ-oz-7Ia"/>
+                        <outlet property="wavPlotView" destination="Rg4-qX-SlP" id="um1-Uz-gJr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>

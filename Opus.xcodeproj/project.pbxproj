@@ -1,0 +1,400 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA1D739C214674EE00B0A0CF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D739B214674EE00B0A0CF /* AppDelegate.m */; };
+		EA1D739F214674EE00B0A0CF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D739E214674EE00B0A0CF /* ViewController.m */; };
+		EA1D73A2214674EE00B0A0CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1D73A0214674EE00B0A0CF /* Main.storyboard */; };
+		EA1D73A4214674F100B0A0CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA1D73A3214674F100B0A0CF /* Assets.xcassets */; };
+		EA1D73A7214674F100B0A0CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA1D73A5214674F100B0A0CF /* LaunchScreen.storyboard */; };
+		EA1D73AA214674F100B0A0CF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D73A9214674F100B0A0CF /* main.m */; };
+		EA1D73BF2146758800B0A0CF /* libopus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1D73BC2146758800B0A0CF /* libopus.a */; };
+		EA1D73C221467ABC00B0A0CF /* AudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1D73C121467ABC00B0A0CF /* AudioManager.m */; };
+		EA3C7C1C21491A2000953278 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3C7C1B21491A2000953278 /* AudioToolbox.framework */; };
+		EA3C7C222149FF5600953278 /* PlotView.m in Sources */ = {isa = PBXBuildFile; fileRef = EA3C7C212149FF5600953278 /* PlotView.m */; };
+		EAE3045521476C4A00664D79 /* OpusCodec.m in Sources */ = {isa = PBXBuildFile; fileRef = EAE3045421476C4A00664D79 /* OpusCodec.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EA1D7397214674EE00B0A0CF /* Opus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Opus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA1D739A214674EE00B0A0CF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EA1D739B214674EE00B0A0CF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EA1D739D214674EE00B0A0CF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EA1D739E214674EE00B0A0CF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EA1D73A1214674EE00B0A0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA1D73A3214674F100B0A0CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA1D73A6214674F100B0A0CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA1D73A8214674F100B0A0CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA1D73A9214674F100B0A0CF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA1D73BA2146758800B0A0CF /* opus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus.h; sourceTree = "<group>"; };
+		EA1D73BB2146758800B0A0CF /* opus_multistream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus_multistream.h; sourceTree = "<group>"; };
+		EA1D73BC2146758800B0A0CF /* libopus.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libopus.a; sourceTree = "<group>"; };
+		EA1D73BD2146758800B0A0CF /* opus_types.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus_types.h; sourceTree = "<group>"; };
+		EA1D73BE2146758800B0A0CF /* opus_defines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = opus_defines.h; sourceTree = "<group>"; };
+		EA1D73C021467ABB00B0A0CF /* AudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioManager.h; sourceTree = "<group>"; };
+		EA1D73C121467ABC00B0A0CF /* AudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioManager.m; sourceTree = "<group>"; };
+		EA3C7C1B21491A2000953278 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		EA3C7C202149FF5600953278 /* PlotView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlotView.h; sourceTree = "<group>"; };
+		EA3C7C212149FF5600953278 /* PlotView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlotView.m; sourceTree = "<group>"; };
+		EA3C7C23214A57B200953278 /* AudioDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioDefine.h; sourceTree = "<group>"; };
+		EAE3045321476C4A00664D79 /* OpusCodec.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpusCodec.h; sourceTree = "<group>"; };
+		EAE3045421476C4A00664D79 /* OpusCodec.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OpusCodec.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA1D7394214674EE00B0A0CF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA3C7C1C21491A2000953278 /* AudioToolbox.framework in Frameworks */,
+				EA1D73BF2146758800B0A0CF /* libopus.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA1D738E214674EE00B0A0CF = {
+			isa = PBXGroup;
+			children = (
+				EA1D7399214674EE00B0A0CF /* Opus */,
+				EA1D7398214674EE00B0A0CF /* Products */,
+				EA3C7C1A21491A1F00953278 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EA1D7398214674EE00B0A0CF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D7397214674EE00B0A0CF /* Opus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA1D7399214674EE00B0A0CF /* Opus */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D73B92146758800B0A0CF /* lib */,
+				EA1D739A214674EE00B0A0CF /* AppDelegate.h */,
+				EA1D739B214674EE00B0A0CF /* AppDelegate.m */,
+				EA1D73C021467ABB00B0A0CF /* AudioManager.h */,
+				EA1D73C121467ABC00B0A0CF /* AudioManager.m */,
+				EA3C7C202149FF5600953278 /* PlotView.h */,
+				EA3C7C212149FF5600953278 /* PlotView.m */,
+				EAE3045321476C4A00664D79 /* OpusCodec.h */,
+				EAE3045421476C4A00664D79 /* OpusCodec.m */,
+				EA3C7C23214A57B200953278 /* AudioDefine.h */,
+				EA1D739D214674EE00B0A0CF /* ViewController.h */,
+				EA1D739E214674EE00B0A0CF /* ViewController.m */,
+				EA1D73A0214674EE00B0A0CF /* Main.storyboard */,
+				EA1D73A3214674F100B0A0CF /* Assets.xcassets */,
+				EA1D73A5214674F100B0A0CF /* LaunchScreen.storyboard */,
+				EA1D73A8214674F100B0A0CF /* Info.plist */,
+				EA1D73A9214674F100B0A0CF /* main.m */,
+			);
+			path = Opus;
+			sourceTree = "<group>";
+		};
+		EA1D73B92146758800B0A0CF /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				EA1D73BA2146758800B0A0CF /* opus.h */,
+				EA1D73BB2146758800B0A0CF /* opus_multistream.h */,
+				EA1D73BC2146758800B0A0CF /* libopus.a */,
+				EA1D73BD2146758800B0A0CF /* opus_types.h */,
+				EA1D73BE2146758800B0A0CF /* opus_defines.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		EA3C7C1A21491A1F00953278 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA3C7C1B21491A2000953278 /* AudioToolbox.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA1D7396214674EE00B0A0CF /* Opus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA1D73AD214674F100B0A0CF /* Build configuration list for PBXNativeTarget "Opus" */;
+			buildPhases = (
+				EA1D7393214674EE00B0A0CF /* Sources */,
+				EA1D7394214674EE00B0A0CF /* Frameworks */,
+				EA1D7395214674EE00B0A0CF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Opus;
+			productName = Opus;
+			productReference = EA1D7397214674EE00B0A0CF /* Opus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA1D738F214674EE00B0A0CF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Jonor;
+				TargetAttributes = {
+					EA1D7396214674EE00B0A0CF = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+				};
+			};
+			buildConfigurationList = EA1D7392214674EE00B0A0CF /* Build configuration list for PBXProject "Opus" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA1D738E214674EE00B0A0CF;
+			productRefGroup = EA1D7398214674EE00B0A0CF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA1D7396214674EE00B0A0CF /* Opus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA1D7395214674EE00B0A0CF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA1D73A7214674F100B0A0CF /* LaunchScreen.storyboard in Resources */,
+				EA1D73A4214674F100B0A0CF /* Assets.xcassets in Resources */,
+				EA1D73A2214674EE00B0A0CF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA1D7393214674EE00B0A0CF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA3C7C222149FF5600953278 /* PlotView.m in Sources */,
+				EA1D739F214674EE00B0A0CF /* ViewController.m in Sources */,
+				EA1D73AA214674F100B0A0CF /* main.m in Sources */,
+				EA1D73C221467ABC00B0A0CF /* AudioManager.m in Sources */,
+				EAE3045521476C4A00664D79 /* OpusCodec.m in Sources */,
+				EA1D739C214674EE00B0A0CF /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EA1D73A0214674EE00B0A0CF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA1D73A1214674EE00B0A0CF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA1D73A5214674F100B0A0CF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA1D73A6214674F100B0A0CF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA1D73AB214674F100B0A0CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA1D73AC214674F100B0A0CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA1D73AE214674F100B0A0CF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3FWM26YDF;
+				INFOPLIST_FILE = Opus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Opus/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonor.Opus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		EA1D73AF214674F100B0A0CF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3FWM26YDF;
+				INFOPLIST_FILE = Opus/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Opus/lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.jonor.Opus;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA1D7392214674EE00B0A0CF /* Build configuration list for PBXProject "Opus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1D73AB214674F100B0A0CF /* Debug */,
+				EA1D73AC214674F100B0A0CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA1D73AD214674F100B0A0CF /* Build configuration list for PBXNativeTarget "Opus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA1D73AE214674F100B0A0CF /* Debug */,
+				EA1D73AF214674F100B0A0CF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA1D738F214674EE00B0A0CF /* Project object */;
+}
