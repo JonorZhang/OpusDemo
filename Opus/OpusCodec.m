@@ -15,6 +15,7 @@
 #define MAX_PACKET_BYTES    (FRAME_SIZE * CHANNELS * sizeof(opus_int16))
 #define MAX_FRAME_SIZE      (FRAME_SIZE * CHANNELS * sizeof(opus_int16))
 
+// 用于记录opus块大小的类型
 typedef opus_int16 OPUS_DATA_SIZE_T;
 
 
@@ -46,6 +47,8 @@ typedef opus_int16 OPUS_DATA_SIZE_T;
         _encoder = opus_encoder_create(SAMPLE_RATE, CHANNELS, APPLICATION, NULL);
         opus_encoder_ctl(_encoder, OPUS_SET_BITRATE(BITRATE));
         opus_encoder_ctl(_encoder, OPUS_SET_SIGNAL(OPUS_SIGNAL_VOICE));
+//        opus_encoder_ctl(_encoder, OPUS_SET_VBR(0));
+//        opus_encoder_ctl(_encoder, OPUS_SET_APPLICATION(OPUS_APPLICATION_VOIP));
 
         _decoder = opus_decoder_create(SAMPLE_RATE, CHANNELS, NULL);
     }
@@ -61,6 +64,8 @@ typedef opus_int16 OPUS_DATA_SIZE_T;
 
     NSMutableData *mutData = [NSMutableData data];
     unsigned char encodedPacket[MAX_PACKET_BYTES];
+    
+    // 记录opus块大小
     OPUS_DATA_SIZE_T encodedBytes = 0;
 
     while (PCMPtr + FRAME_SIZE < PCMEnd) {
@@ -70,7 +75,10 @@ typedef opus_int16 OPUS_DATA_SIZE_T;
             return nil;
         }
         NSLog(@"encodedBytes: %d",  encodedBytes);
+        
+        // 保存opus块大小
         [mutData appendBytes:&encodedBytes length:sizeof(encodedBytes)];
+        // 保存opus数据
         [mutData appendBytes:encodedPacket length:encodedBytes];
         
         PCMPtr += FRAME_SIZE;
@@ -87,10 +95,13 @@ typedef opus_int16 OPUS_DATA_SIZE_T;
     NSMutableData *mutData = [NSMutableData data];
     
     opus_int16 decodedPacket[MAX_FRAME_SIZE];
-    OPUS_DATA_SIZE_T nBytes = 0;
     int decodedSamples = 0;
+
+    // 保存opus块大小的数据
+    OPUS_DATA_SIZE_T nBytes = 0;
     
     while (opusPtr < opusEnd) {
+        // 取出opus块大小的数据
         nBytes = *(OPUS_DATA_SIZE_T *)opusPtr;
         opusPtr += sizeof(nBytes);
         
